@@ -1,0 +1,11 @@
+@import "./styles/fonts.css";
+@import "./styles/theme.css";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

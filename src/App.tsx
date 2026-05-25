@@ -93,7 +93,7 @@ function App() {
       <header className="relative z-10 w-full">
         <div className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
           <a href="#" className="flex items-center gap-2 hover:scale-102 transition-transform duration-300">
-            <img src="/logo.png" alt="Agri Care Chemicals" className="h-12 w-auto object-contain" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Agri Care Chemicals" className="h-12 w-auto object-contain" />
           </a>
           
           <nav className="hidden md:flex items-center gap-8">

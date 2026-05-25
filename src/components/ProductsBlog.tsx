@@ -186,7 +186,7 @@ export const ProductsBlog: React.FC = () => {
                 {/* Product Card Image */}
                 <div className="h-48 w-full overflow-hidden rounded-2xl mb-6 bg-neutral-100">
                   <img 
-                    src="/product.png" 
+                    src={`${import.meta.env.BASE_URL}product.png`}
                     alt={post.title} 
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />

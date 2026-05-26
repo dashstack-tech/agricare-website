@@ -133,7 +133,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <span className="text-xs uppercase tracking-wider text-[#6F6F6F] font-semibold block mb-0.5">મોબાઈલ નંબર / Call Us</span>
                   <span className="text-sm font-medium text-black">
-                    +91 99092 84188
+                    +91 9737383223
                   </span>
                 </div>
               </div>

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { CompanyInfo } from './components/CompanyInfo';
 import { ContactSection } from './components/ContactSection';
 import { ProductsBlog } from './components/ProductsBlog';
-import { Mail, MapPin, X, Send } from 'lucide-react';
+import { Mail, MapPin, X } from 'lucide-react';
 
 function App() {
   const videoRef = useRef<HTMLVideoElement>(null);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
   const [formState, setFormState] = useState({ name: '', phone: '', message: '' });

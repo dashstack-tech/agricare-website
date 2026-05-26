@@ -8,7 +8,7 @@ function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoOpacity, setVideoOpacity] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalForm, setModalForm] = useState({ name: '', email: '', message: '' });
+  const [modalForm, setModalForm] = useState({ name: '', phone: '', message: '' });
   const [modalSubmitted, setModalSubmitted] = useState(false);
 
   useEffect(() => {
@@ -72,9 +72,9 @@ function App() {
       <div 
         className="absolute z-0 w-full transition-opacity duration-100 ease-out"
         style={{ 
-          top: '300px', 
-          inset: '300px 0px 0px 0px', 
-          height: 'calc(100vh - 300px)',
+          top: '0px', 
+          inset: '0px', 
+          height: '100vh',
           opacity: videoOpacity 
         }}
       >
@@ -85,8 +85,10 @@ function App() {
           playsInline
           className="w-full h-full object-cover"
         />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white" />
+        
+        {/* Very strong bottom fade to eliminate any hard lines */}
+        <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-white via-white/90 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-white" style={{ maskImage: 'linear-gradient(to top, white, transparent)', WebkitMaskImage: 'linear-gradient(to top, white, transparent)' }} />
       </div>
 
       {/* Navigation Bar */}
@@ -120,15 +122,15 @@ function App() {
           paddingBottom: '10rem'
         }}
       >
-        <h1 className="text-5xl sm:text-7xl md:text-8xl max-w-7xl font-normal leading-[0.95] tracking-[-2.46px] font-display text-black animate-fade-rise">
+        <h1 className="text-5xl sm:text-7xl md:text-8xl max-w-7xl font-normal leading-[0.95] tracking-[-2.46px] font-display text-black animate-fade-rise drop-shadow-[0_0px_12px_rgba(255,255,255,0.9)]">
           Empowering growth, we protect <span className="text-[#6F6F6F] italic">the harvests.</span>
         </h1>
 
-        <p className="text-xl sm:text-2xl max-w-3xl mt-4 font-normal text-[#6F6F6F] font-display animate-fade-rise-delay">
+        <p className="text-xl sm:text-2xl max-w-3xl mt-4 font-normal text-[#6F6F6F] font-display animate-fade-rise-delay drop-shadow-[0_0px_8px_rgba(255,255,255,0.9)]">
           કૃષિ વિકાસને વેગ આપીને, અમે પાકનું રક્ષણ કરીએ છીએ.
         </p>
 
-        <p className="text-base sm:text-lg max-w-2xl mt-8 leading-relaxed text-[#6F6F6F] animate-fade-rise-delay">
+        <p className="text-base sm:text-lg max-w-2xl mt-8 leading-relaxed text-[#6F6F6F] animate-fade-rise-delay drop-shadow-[0_0px_8px_rgba(255,255,255,0.9)]">
           ચાંગોદર ઔદ્યોગિક પ્લાન્ટથી ઉચ્ચ ગુણવત્તાવાળા જંતુનાશકો, ખાતરો અને અન્ય કૃષિ રસાયણોનું ઉત્પાદન. (Formulating state-of-the-art agricultural chemicals, protective treatments, and plant growth regulators from our Changodar industrial center.)
         </p>
 
@@ -225,17 +227,16 @@ function App() {
               <form 
                 onSubmit={(e) => {
                   e.preventDefault();
-                  if (modalForm.name && modalForm.email && modalForm.message) {
-                    const subject = `Agri Care Chemicals Inquiry from ${modalForm.name}`;
-                    const body = `Name: ${modalForm.name}\nEmail: ${modalForm.email}\n\nMessage:\n${modalForm.message}`;
-                    const mailtoUrl = `mailto:agricarechemicals3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                  if (modalForm.name && modalForm.phone && modalForm.message) {
+                    const text = `Hello Agri Care Chemicals, my name is ${modalForm.name}. My phone number is ${modalForm.phone}.\n\nMessage:\n${modalForm.message}`;
+                    const whatsappUrl = `https://wa.me/919737383223?text=${encodeURIComponent(text)}`;
                     
-                    window.location.href = mailtoUrl;
+                    window.open(whatsappUrl, '_blank');
 
                     setModalSubmitted(true);
                     setTimeout(() => {
                       setModalSubmitted(false);
-                      setModalForm({ name: '', email: '', message: '' });
+                      setModalForm({ name: '', phone: '', message: '' });
                       setIsModalOpen(false);
                     }, 2500);
                   }
@@ -258,16 +259,16 @@ function App() {
                 </div>
 
                 <div>
-                  <label htmlFor="modal-email" className="block text-xs font-semibold uppercase tracking-wider text-[#6F6F6F] mb-1">
-                    ઈમેલ એડ્રેસ / Email Address
+                  <label htmlFor="modal-phone" className="block text-xs font-semibold uppercase tracking-wider text-[#6F6F6F] mb-1">
+                    મોબાઈલ નંબર / Mobile Number
                   </label>
                   <input
-                    type="email"
-                    id="modal-email"
+                    type="tel"
+                    id="modal-phone"
                     required
-                    value={modalForm.email}
-                    onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
-                    placeholder="તમારું ઈમેલ આઈડી લખો"
+                    value={modalForm.phone}
+                    onChange={(e) => setModalForm({ ...modalForm, phone: e.target.value })}
+                    placeholder="તમારો મોબાઈલ નંબર લખો"
                     className="w-full px-4 py-2.5 rounded-full border border-neutral-200 text-sm focus:outline-none focus:border-neutral-950 transition-colors bg-white"
                   />
                 </div>
@@ -289,10 +290,12 @@ function App() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full py-3 text-sm bg-black text-white hover:scale-103 transition-transform duration-300 font-semibold cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full py-3 text-sm bg-[#25D366] text-white hover:bg-[#1DA851] hover:scale-103 transition-all duration-300 font-semibold cursor-pointer shadow-lg shadow-[#25D366]/20"
                 >
-                  <span>સબમિટ કરો / Submit Inquiry</span>
-                  <Send className="w-4 h-4" />
+                  <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.66-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                  </svg>
+                  <span>WhatsApp પર મોકલો / Send on WhatsApp</span>
                 </button>
               </form>
             )}

@@ -2,7 +2,7 @@
 @import "./styles/theme.css";
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', 'Noto Sans Gujarati', sans-serif;
   background-color: #ffffff;
   color: #000000;
   margin: 0;

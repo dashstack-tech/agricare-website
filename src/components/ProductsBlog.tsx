@@ -14,73 +14,73 @@ interface ProductPost {
 const PRODUCTS_POSTS: ProductPost[] = [
   {
     id: 'post-1',
-    title: 'SAHHO',
+    title: 'સાહો / SAHHO',
     chemical: 'Thiamethoxam 30% FS',
     category: 'Insecticide',
-    description: 'A premium systemic seed treatment insecticide. Provides broad-spectrum control of early season sucking pests, establishing a robust defense shield for young seedlings.',
+    description: 'શ્રેષ્ઠ સિસ્ટેમિક બીજ માવજત જંતુનાશક. શરૂઆતની સિઝનમાં રસ ચૂસતી જીવાતોનું વ્યાપક નિયંત્રણ પૂરું પાડે છે, નાના છોડ માટે મજબૂત સંરક્ષણ કવચ સ્થાપિત કરે છે.',
     packings: '1 Ltr, 500ml, 250ml',
     application: 'કપાસ, ઘઉં અને સોયાબીનના પાક માટે બીજ માવજત. (Seed treatment for cotton, wheat, and soy crops.)'
   },
   {
     id: 'post-2',
-    title: 'TAKLE KING',
+    title: 'ટકલ કિંગ / TAKLE KING',
     chemical: 'Diafenthiuron 47% + Bifenthrin 9.4% SC',
     category: 'Insecticide',
-    description: 'Dual-action contact and systemic chemistry. Designed to combat resistant whiteflies, aphids, and mites in horticultural crops, promoting green growth.',
+    description: 'દ્વિ-અસરકારક સંપર્ક અને સિસ્ટેમિક રસાયણ. બાગાયતી પાકોમાં સફેદ માખી, મોલોમશી અને ઇયળ જેવી જીવાતો સામે લડવા માટે રચાયેલ, લીલા વિકાસને પ્રોત્સાહન આપે છે.',
     packings: '1 Ltr, 500ml, 250ml',
     application: 'કપાસ અને શાકભાજીના પાક માટે પર્ણિય છંટકાવ. (Foliar spray for cotton and vegetable crops.)'
   },
   {
     id: 'post-3',
-    title: 'KOREVA',
+    title: 'કોરેવા / KOREVA',
     chemical: 'Chlorantraniliprole 18.5% SC',
     category: 'Insecticide',
-    description: 'Next-generation protection against lepidopteran pests. Offers long-lasting residual control with low dosage, safeguarding crop yield integrity.',
+    description: 'લેપિડોપ્ટેરન જીવાતો સામે અત્યાધુનિક રક્ષણ. ઓછા ડોઝ સાથે લાંબા સમય સુધી અસરકારક નિયંત્રણ આપે છે, પાકની ઉપજની ગુણવત્તા જાળવી રાખે છે.',
     packings: '150ml, 60ml, 30ml',
     application: 'ડાંગરમાં ગાભમેરા અને શેરડીમાં ટોચ કોરી ખાનાર ઈયળના નિયંત્રણ માટે. (Rice stem borer and sugarcane shoot borer control.)'
   },
   {
     id: 'post-4',
-    title: 'AGRI GLUFO',
+    title: 'એગ્રી ગ્લુફો / AGRI GLUFO',
     chemical: 'Glufosinate Ammonium 13.5% W/W SL',
     category: 'Herbicide',
-    description: 'A versatile, non-selective contact herbicide. Eradicates annual and perennial weeds in orchards and plantations without harming root structures.',
+    description: 'બહુમુખી, બિન-પસંદગીયુક્ત સંપર્ક નિંદણનાશક. ફળઝાડની વાડીઓ અને બગીચાઓમાં મૂળના બંધારણને નુકસાન પહોંચાડ્યા વિના વાર્ષિક અને બારમાસી નિંદણને નષ્ટ કરે છે.',
     packings: '1 Ltr, 500ml',
     application: 'ચાના બગીચા, ફળઝાડની વાડીઓ અને બિન-પાક વિસ્તારમાં નિંદણ નિયંત્રણ. (Weed control in tea gardens, orchards, and non-crop areas.)'
   },
   {
     id: 'post-5',
-    title: 'EMPIRE',
+    title: 'એમ્પાયર / EMPIRE',
     chemical: 'Azoxystrobin 11% + Tebuconazole 18.3% SC',
     category: 'Fungicide',
-    description: 'A stellar broad-spectrum systemic fungicide combining dual active ingredients. Curative and preventive control of sheath blight, rust, and leaf spots.',
+    description: 'દ્વિ સક્રિય ઘટકોને જોડતું અદભૂત વ્યાપક-સ્પેક્ટ્રમ સિસ્ટેમિક ફૂગનાશક. શીથ બ્લાઇટ, રસ્ટ (ગેરુ) અને પાંદડાના ટપકાં રોગનું નિવારક અને રોગનિવારક નિયંત્રણ.',
     packings: '1 Ltr, 500ml, 250ml',
     application: 'ડાંગર, ઘઉં અને ડુંગળીના પાક માટે પર્ણિય છંટકાવ. (Foliar spray for paddy, wheat, and onion crops.)'
   },
   {
     id: 'post-6',
-    title: 'HUMA SHAKTI',
+    title: 'હુમા શક્તિ / HUMA SHAKTI',
     chemical: 'Crop Flowering Stimulant',
     category: 'PGR',
-    description: 'Enriched crop stimulant formulated to trigger profuse flowering and minimize flower drop. Optimizes crop metabolism for superior quality fruit development.',
+    description: 'સમૃદ્ધ પાક ઉત્તેજક જે વિપુલ પ્રમાણમાં ફૂલ લાવવા અને ફૂલ ખરતા અટકાવવા માટે ઘડવામાં આવ્યું છે. ઉચ્ચ ગુણવત્તાવાળા ફળના વિકાસ માટે પાકના ચયાપચયને શ્રેષ્ઠ બનાવે છે.',
     packings: '1 Ltr, 500ml',
     application: 'કપાસ, મરચી, કેરી અને લીંબુ વર્ગના ફળો માટે ઉપયોગી. (Applicable to cotton, chilly, mango, and citrus fruits.)'
   },
   {
     id: 'post-7',
-    title: 'TEBUZA',
+    title: 'ટેબુઝા / TEBUZA',
     chemical: 'Tebuconazole 10% + Sulphur 65% WG',
     category: 'Fungicide',
-    description: 'Advanced premix fungicide providing powdery mildew and leaf spot protection alongside essential sulphur nutrition, boosting overall crop immunity.',
+    description: 'અદ્યતન પ્રિમિક્સ ફૂગનાશક જે પાવડરી માઇલ્ડ્યુ અને પાંદડાના ટપકાં સામે રક્ષણ પૂરું પાડે છે, સાથે આવશ્યક સલ્ફર પોષણ આપે છે, એકંદરે પાકની રોગપ્રતિકારક શક્તિ વધારે છે.',
     packings: '1 Kg, 500gm, 250gm',
     application: 'દ્રાક્ષ, મરચી અને મગફળીના પાક માટે ઉપયોગી. (Applicable to grapes, chilly, and groundnut crops.)'
   },
   {
     id: 'post-8',
-    title: 'ZEBROLA',
+    title: 'ઝેબ્રોલા / ZEBROLA',
     chemical: 'Gibberellic Acid 0.001%',
     category: 'PGR',
-    description: 'Natural plant hormone formulating agent to accelerate cell division, break seed dormancy, and increase overall plant size and crop yields.',
+    description: 'કુદરતી વનસ્પતિ હોર્મોન ફોર્મ્યુલેટિંગ એજન્ટ જે કોષ વિભાજનને વેગ આપે છે, બીજની સુષુપ્તાવસ્થા તોડે છે અને એકંદરે છોડના કદ અને પાકની ઉપજમાં વધારો કરે છે.',
     packings: '1 Ltr, 500ml, 250ml',
     application: 'દ્રાક્ષ, ડાંગર અને શાકભાજી પર ડ્રિપ અથવા પર્ણિય છંટકાવ. (Drip or foliar spray on grapes, paddy, and vegetables.)'
   }
@@ -195,7 +195,7 @@ export const ProductsBlog: React.FC = () => {
                 {/* Meta details */}
                 <div className="flex justify-between items-center mb-6">
                   <span className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border ${getCategoryBadgeClass(post.category)}`}>
-                    {post.category}
+                    {getCategoryLabel(post.category)}
                   </span>
                   <span className="text-[10px] text-neutral-400 font-semibold font-mono bg-neutral-100/60 px-2 py-0.5 rounded-md">
                     Packing: {post.packings.split(',')[0]} & more
